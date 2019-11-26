@@ -67,20 +67,20 @@ class Linked_list(object):
 			loop_p = loop_p.next
 
 def add_link(l1,l2):
-		l3 = Linked_list()
-		c1 = l1.head
-		c2 = l2.head
-		carry = 0
-		while c1 != None:
-			s = c1.data + c2.data + carry	
-			if s > 10:
-				carry = s - 10
-				if c1.next != None:
-					s = int(s/10)
-			l3.add_node(s)
-			c1 = c1.next
-			c2 = c2.next
-		return l3
+	l3 = Linked_list()
+	c1 = l1.head
+	c2 = l2.head
+	carry = 0
+	while c1 != None:
+		s = c1.data + c2.data + carry	
+		if s > 10:
+			carry = s - 10
+			if c1.next != None:
+				s = int(s/10)
+		l3.add_node(s)
+		c1 = c1.next
+		c2 = c2.next
+	return l3
 
 ll = Linked_list()
 ll.add_node(1)
